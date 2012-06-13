@@ -77,7 +77,7 @@ class Command(object):
                     )
                 else:
                     self.out, self.err = self.process.communicate(self.data)
-            except Exception as exc:
+            except Exception, exc:
                 self.exc = exc
               
 
