@@ -14,7 +14,7 @@ class SimpleTest(unittest.TestCase):
         self.assertEqual(r.status_code, 0)
 
     def test_timeout(self):
-        r = envoy.run('yes | head', timeout=1)
+        r = envoy.run('yes | head', timeout=4)
         self.assertEqual(r.std_out, 'y\ny\ny\ny\ny\ny\ny\ny\ny\ny\n')
         self.assertEqual(r.status_code, 0)
 
